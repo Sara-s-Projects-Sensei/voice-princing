@@ -11,7 +11,6 @@ import {
   Sparkles, 
   TrendingUp,
   BarChart3,
-  ChevronRight,
   FileText,
   UserCheck,
   Layout,
