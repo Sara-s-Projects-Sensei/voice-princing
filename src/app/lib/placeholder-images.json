@@ -1,0 +1,16 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract digital green wave patterns",
+      "imageUrl": "https://picsum.photos/seed/voxhero/1920/1080",
+      "imageHint": "abstract digital green"
+    },
+    {
+      "id": "app-preview",
+      "description": "Clean dark UI dashboard preview",
+      "imageUrl": "https://picsum.photos/seed/voxpreview/1200/800",
+      "imageHint": "dashboard dark interface"
+    }
+  ]
+}
