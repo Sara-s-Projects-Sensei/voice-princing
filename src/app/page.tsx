@@ -24,7 +24,8 @@ import {
   FileText,
   UserCheck,
   Layout,
-  LucideIcon
+  LucideIcon,
+  TrendingUp
 } from "lucide-react";
 
 export default function Home() {
@@ -67,10 +68,11 @@ export default function Home() {
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight text-reveal" style={{ animationDelay: '0.1s' }}>
             Des agents IA qui parlent <br />
-            à vos clients <span className="text-primary italic">24/7</span>
+            à vos clients <span className="text-primary italic">24/7.</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light text-reveal" style={{ animationDelay: '0.2s' }}>
-            Automatisez vos appels, WhatsApp, chats web et réseaux sociaux avec des agents intelligents capables de répondre, qualifier et vendre.
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-bold text-reveal flex items-center justify-center gap-3" style={{ animationDelay: '0.2s' }}>
+            plus de leads • plus de ventes • plus de ROI
+            <TrendingUp className="w-6 h-6 text-primary" />
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 text-reveal" style={{ animationDelay: '0.3s' }}>
             <Button 
@@ -115,7 +117,7 @@ export default function Home() {
 
       {/* Comment ça marche */}
       <section className="py-24 px-6 bg-[#0E1210] border-y border-white/5">
-        <div className="max-w-7xl auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black text-center mb-16 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <StepCard 
