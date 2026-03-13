@@ -66,9 +66,8 @@ export default function Home() {
             🚀 AI VOICE & CONVERSATIONAL AGENTS
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight text-reveal" style={{ animationDelay: '0.1s' }}>
-            DES AGENTS IA QUI RÉPONDENT <br />
-            À VOS CLIENTS <span className="text-primary italic">24H/24</span> <br />
-            ET SUR TOUS LES CANAUX
+            Des agents IA qui parlent <br />
+            à vos clients <span className="text-primary italic">24/7</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light text-reveal" style={{ animationDelay: '0.2s' }}>
             Automatisez vos appels, WhatsApp, chats web et réseaux sociaux avec des agents intelligents capables de répondre, qualifier et vendre.
@@ -116,7 +115,7 @@ export default function Home() {
 
       {/* Comment ça marche */}
       <section className="py-24 px-6 bg-[#0E1210] border-y border-white/5">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl auto">
           <h2 className="text-3xl md:text-5xl font-black text-center mb-16 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <StepCard 
