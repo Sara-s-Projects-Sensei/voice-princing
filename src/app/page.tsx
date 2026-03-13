@@ -30,12 +30,11 @@ export default function Home() {
       {/* BARRE DE MENU HORIZONTALE */}
       <header className="fixed top-0 left-0 right-0 h-20 bg-[#080B0A]/95 backdrop-blur-xl border-b border-white/10 z-[100] flex items-center">
         <div className="container mx-auto px-6 flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo (Icône uniquement) */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center digital-glow">
               <BarChart3 className="text-black w-6 h-6" />
             </div>
-            <span className="text-2xl font-black tracking-tighter text-white">SAWT <span className="text-primary">IA</span></span>
           </div>
 
           {/* Navigation Horizontale */}
