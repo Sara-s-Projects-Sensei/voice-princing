@@ -83,17 +83,17 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6 text-reveal" style={{ animationDelay: '0.3s' }}>
             <Button 
               size="lg" 
-              className="bg-primary text-black hover:bg-primary/90 digital-glow px-12 h-16 rounded-full text-xl font-black uppercase tracking-tighter group"
+              className="bg-primary text-black hover:bg-primary/90 digital-glow px-10 h-14 rounded-full text-lg font-black uppercase tracking-tighter group"
               onClick={() => setShowDashboard(true)}
             >
-              Démarrer gratuitement <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              Démarrer gratuitement <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/10 hover:border-primary text-white hover:text-primary px-12 h-16 rounded-full text-xl font-bold bg-white/5 backdrop-blur-sm"
+              className="border-white/10 hover:border-primary text-white hover:text-primary px-10 h-14 rounded-full text-lg font-bold bg-white/5 backdrop-blur-sm"
             >
-              Voir la démo <Play className="ml-2 w-5 h-5 fill-current" />
+              Voir la démo <Play className="ml-2 w-4 h-4 fill-current" />
             </Button>
           </div>
         </div>
