@@ -60,7 +60,7 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section className="relative pt-48 pb-20 px-6 flex flex-col items-center text-center overflow-hidden">
-        <div className="max-w-4xl mx-auto space-y-10 relative z-10">
+        <div className="max-w-4xl mx-auto space-y-8 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em] text-reveal">
             🚀 AI VOICE & CONVERSATIONAL AGENTS
           </div>
@@ -70,10 +70,15 @@ export default function Home() {
             À VOS CLIENTS <span className="text-primary italic">24/7.</span>
           </h1>
 
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto font-bold text-reveal flex items-center justify-center gap-3 whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
-            Leads qualifiés • Ventes automatisées • ROI maximisé
-            <TrendingUp className="w-5 h-5 text-primary" />
-          </p>
+          <div className="space-y-3 text-reveal" style={{ animationDelay: '0.2s' }}>
+            <p className="text-sm md:text-base font-bold text-primary uppercase tracking-widest">
+              Darija marocaine native • 32+ langues
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto font-bold flex items-center justify-center gap-3 whitespace-nowrap">
+              Leads qualifiés • Ventes automatisées • ROI maximisé
+              <TrendingUp className="w-5 h-5 text-primary" />
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6 text-reveal" style={{ animationDelay: '0.3s' }}>
             <Button 
