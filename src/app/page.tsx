@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, cloneElement } from "react";
@@ -5,10 +6,7 @@ import { Dashboard } from "@/components/voxchat/Dashboard";
 import { Button } from "@/components/ui/button";
 import { 
   Mic, 
-  Shield, 
   Search, 
-  Zap, 
-  CheckCircle, 
   ArrowRight, 
   Play, 
   Sparkles, 
@@ -24,7 +22,6 @@ import {
   Headphones, 
   Hospital,
   FileText,
-  BarChart3,
   UserCheck,
   Layout
 } from "lucide-react";
@@ -63,7 +60,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 px-6 flex flex-col items-center text-center overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_center,_var(--primary)_0%,_transparent_70%)] opacity-[0.05] pointer-events-none" />
+        {/* Sky-like glow removed here */}
         
         <div className="max-w-4xl mx-auto space-y-8 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest text-reveal">
