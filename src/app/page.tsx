@@ -48,7 +48,7 @@ export default function Home() {
           <span className="text-2xl font-bold tracking-tighter">Sawt <span className="text-primary">IA</span></span>
         </div>
         
-        <nav className="hidden xl:flex items-center gap-10 text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-10 text-sm font-medium">
           <a href="#" className="text-primary hover:text-primary transition-colors">Accueil</a>
           <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
           <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
@@ -199,7 +199,7 @@ export default function Home() {
                  <div className="flex-1 bg-primary/30 rounded-t-lg h-[50%] animate-pulse" />
                  <div className="flex-1 bg-primary/50 rounded-t-lg h-[70%] animate-pulse" />
                  <div className="flex-1 bg-primary/25 rounded-t-lg h-[45%] animate-pulse" />
-                 <div className="flex-1 bg-primary/55 rounded-t-lg h-[65%] animate-pulse" />
+                 <div className="flex-1 bg-primary/55 rounded-t-lg h-[65 text-primary] animate-pulse" />
               </div>
               <div className="flex justify-between text-[6px] md:text-[8px] uppercase tracking-widest opacity-40 font-bold pt-4">
                  <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
