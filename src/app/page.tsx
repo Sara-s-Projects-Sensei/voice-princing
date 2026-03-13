@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -24,7 +25,9 @@ import {
   UserCheck,
   Layout,
   LucideIcon,
-  TrendingUp
+  TrendingUp,
+  BarChart3,
+  ChevronRight
 } from "lucide-react";
 
 export default function Home() {
@@ -37,26 +40,32 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#080B0A] text-foreground flex flex-col">
       {/* Navigation */}
-      <header className="px-10 py-6 flex justify-between items-center bg-background/80 backdrop-blur-lg fixed top-0 w-full z-50 border-b border-white/5">
+      <header className="px-6 md:px-12 py-4 flex justify-between items-center bg-[#080B0A]/90 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/5">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center digital-glow">
-            <Mic className="text-background w-6 h-6" />
+          <div className="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center bg-primary/5">
+            <BarChart3 className="text-primary w-5 h-5" />
           </div>
-          <span className="text-2xl font-black tracking-tighter uppercase">SAWT <span className="text-primary">IA</span></span>
+          <span className="text-2xl font-bold tracking-tighter">Sawt <span className="text-primary">IA</span></span>
         </div>
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-          <a href="#" className="hover:text-primary transition-colors">Accueil</a>
-          <a href="#solutions" className="hover:text-primary transition-colors">Solutions</a>
-          <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
-          <a href="#api" className="hover:text-primary transition-colors">API</a>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+        
+        <nav className="hidden xl:flex items-center gap-10 text-sm font-medium">
+          <a href="#" className="text-primary hover:text-primary transition-colors">Accueil</a>
+          <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
+          <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
+          <a href="#api" className="text-muted-foreground hover:text-primary transition-colors">API</a>
+          <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+          <a href="#voice-over" className="text-muted-foreground hover:text-primary transition-colors">Voice-Over</a>
+        </nav>
+
+        <div className="hidden lg:flex items-center gap-8">
+          <a href="#demo" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Demander une démo</a>
           <Button 
-            className="bg-primary text-background hover:bg-primary/90 digital-glow px-6 rounded-full font-bold ml-4"
+            className="bg-gradient-to-r from-[#1A4D3E] to-[#9BE963] text-white hover:opacity-90 px-8 rounded-full font-bold flex items-center gap-2 h-12 shadow-lg border-none"
             onClick={() => setShowDashboard(true)}
           >
-            Accéder aux agents
+            Accéder aux agents <ChevronRight className="w-4 h-4" />
           </Button>
-        </nav>
+        </div>
       </header>
 
       {/* Hero Section */}
@@ -139,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* Cas d'utilisation */}
-      <section id="solutions" className="py-24 px-6 bg-[#080B0A]">
+      <section id="services" className="py-24 px-6 bg-[#080B0A]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black text-center mb-16 tracking-tighter uppercase">Pour quoi utiliser SAWT IA ?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -239,7 +248,7 @@ export default function Home() {
           <div className="space-y-6 max-w-sm">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Mic className="text-background w-5 h-5" />
+                <BarChart3 className="text-background w-5 h-5" />
               </div>
               <span className="text-xl font-black uppercase">SAWT IA</span>
             </div>
