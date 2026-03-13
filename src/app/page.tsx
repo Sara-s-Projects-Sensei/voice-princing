@@ -5,16 +5,15 @@ import { useState } from "react";
 import { Dashboard } from "@/components/voxchat/Dashboard";
 import { Button } from "@/components/ui/button";
 import { 
-  Mic, 
   ArrowRight, 
   Play, 
-  Sparkles, 
   TrendingUp,
   BarChart3,
   FileText,
   UserCheck,
   Layout,
-  LucideIcon
+  LucideIcon,
+  Sparkles
 } from "lucide-react";
 
 export default function Home() {
@@ -26,18 +25,18 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#080B0A] text-foreground flex flex-col font-body selection:bg-primary selection:text-black">
-      {/* BARRE DE MENU HORIZONTALE */}
+      {/* BARRE DE MENU HORIZONTALE - NAVIGATION PRINCIPALE */}
       <header className="fixed top-0 left-0 right-0 h-20 bg-[#080B0A]/95 backdrop-blur-xl border-b border-white/10 z-[100] flex items-center">
         <div className="container mx-auto px-6 flex justify-between items-center">
-          {/* Logo (Icône uniquement) */}
+          {/* Logo Minimaliste */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center digital-glow">
               <BarChart3 className="text-black w-6 h-6" />
             </div>
           </div>
 
-          {/* Navigation Horizontale */}
-          <nav className="hidden lg:flex items-center gap-8">
+          {/* Navigation Horizontale Demandée */}
+          <nav className="flex items-center gap-8">
             <a href="#services" className="text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors">Services</a>
             <a href="#pricing" className="text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors">Pricing</a>
             <a href="#api" className="text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors">API</a>
@@ -45,7 +44,7 @@ export default function Home() {
             <a href="#voice-over" className="text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors">Voice-Over</a>
           </nav>
 
-          {/* Actions */}
+          {/* Actions de Fin de Barre */}
           <div className="flex items-center gap-6">
             <a href="#demo" className="text-sm font-bold uppercase tracking-widest text-white hover:text-primary transition-colors hidden sm:block">Demander une démo</a>
             <Button 
@@ -71,7 +70,7 @@ export default function Home() {
             <span className="text-primary italic">24/7.</span>
           </h1>
 
-          <p className="text-xl md:text-3xl text-muted-foreground max-w-2xl mx-auto font-bold text-reveal flex items-center justify-center gap-4" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-bold text-reveal flex items-center justify-center gap-4" style={{ animationDelay: '0.2s' }}>
             Leads qualifiés • Ventes automatisées • ROI maximisé
             <TrendingUp className="w-8 h-8 text-primary" />
           </p>
@@ -101,7 +100,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* VISUEL PRODUIT (MOCKUP DASHBOARD) */}
+        {/* VISUEL PRODUIT (MOCKUP DASHBOARD SANS IMAGES DE STOCK) */}
         <div className="mt-24 max-w-6xl mx-auto relative group w-full px-6">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-3xl opacity-20" />
           <div className="relative rounded-3xl border border-white/10 overflow-hidden bg-[#0A0D0C] shadow-2xl p-16 md:p-32 flex flex-col items-center justify-center text-center">
