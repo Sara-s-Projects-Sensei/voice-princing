@@ -38,7 +38,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#080B0A] text-foreground flex flex-col">
+    <div className="min-h-screen bg-[#080B0A] text-foreground flex flex-col font-body">
       {/* Navigation */}
       <header className="px-6 md:px-12 py-4 flex justify-between items-center bg-[#080B0A]/90 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/5">
         <div className="flex items-center gap-3">
