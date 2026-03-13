@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -71,7 +70,7 @@ export default function Home() {
             à vos clients <span className="text-primary italic">24/7.</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-bold text-reveal flex items-center justify-center gap-3" style={{ animationDelay: '0.2s' }}>
-            plus de leads • plus de ventes • plus de ROI
+            Leads qualifiés • Ventes automatisées • ROI maximisé
             <TrendingUp className="w-6 h-6 text-primary" />
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 text-reveal" style={{ animationDelay: '0.3s' }}>
