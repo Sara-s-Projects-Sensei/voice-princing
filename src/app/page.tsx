@@ -9,12 +9,6 @@ import {
   Play, 
   TrendingUp,
   Mic,
-  BarChart3,
-  FileText,
-  UserCheck,
-  Layout,
-  LucideIcon,
-  Sparkles
 } from "lucide-react";
 
 export default function Home() {
@@ -105,20 +99,6 @@ export default function Home() {
             >
               <Mic className="w-6 h-6" /> Parlez à Sawt IA
             </Button>
-          </div>
-        </div>
-
-        {/* VISUEL PRODUIT */}
-        <div className="mt-24 max-w-6xl mx-auto relative group w-full px-6">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-3xl opacity-20" />
-          <div className="relative rounded-3xl border border-white/10 overflow-hidden bg-[#0A0D0C] shadow-2xl p-16 md:p-32 flex flex-col items-center justify-center text-center">
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-12 text-2xl md:text-6xl font-black uppercase tracking-tighter text-primary">
-               <span>Conversations</span>
-               <span className="opacity-20 text-white font-light">|</span>
-               <span>Agents</span>
-               <span className="opacity-20 text-white font-light">|</span>
-               <span>Analytics</span>
-            </div>
           </div>
         </div>
       </section>
