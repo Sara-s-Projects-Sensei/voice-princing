@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -20,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#080B0A] text-foreground flex flex-col font-body selection:bg-primary selection:text-black">
-      {/* BARRE DE MENU - REPRODUCTION FIDÈLE DE L'IMAGE */}
+      {/* BARRE DE MENU */}
       <header className="fixed top-0 left-0 right-0 h-20 bg-[#080B0A] border-b border-white/5 z-[100] flex items-center">
         <div className="container mx-auto px-6 flex justify-between items-center">
           {/* Logo Sawt IA */}
@@ -107,21 +106,26 @@ export default function Home() {
       <section className="py-32 px-6 bg-[#0E1210] border-y border-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-black text-center mb-24 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <StepCard 
               number="1️⃣"
-              title="Créez votre agent IA"
-              description="Configurez sa voix, son métier et son comportement selon vos besoins spécifiques."
+              title="Configurez votre agent IA"
+              description="Choisissez sa voix, son rôle et ses scénarios de conversation selon votre activité."
             />
             <StepCard 
               number="2️⃣"
               title="Connectez vos canaux"
-              description="Déployez instantanément sur Téléphone, WhatsApp, site web ou Meta (Facebook/Instagram)."
+              description="Déployez votre agent sur Téléphone, WhatsApp, Website et Meta (Facebook & Instagram) pour répondre à vos clients partout."
             />
             <StepCard 
               number="3️⃣"
+              title="Intégrez vos outils"
+              description="Connectez SAWT IA à votre CRM, ERP, Shopify, WooCommerce, Google Sheets ou Google Agenda pour synchroniser automatiquement vos données."
+            />
+            <StepCard 
+              number="4️⃣"
               title="Automatisez vos conversations"
-              description="L'IA répond aux questions, qualifie les leads et analyse chaque échange automatiquement."
+              description="L’agent IA répond aux clients, qualifie les leads, planifie des rendez-vous et alimente vos outils automatiquement."
             />
           </div>
         </div>
@@ -155,10 +159,10 @@ export default function Home() {
 
 function StepCard({ number, title, description }: { number: string, title: string, description: string }) {
   return (
-    <div className="relative p-12 rounded-[40px] bg-card/30 border border-white/5 hover:border-primary/20 transition-all group overflow-hidden">
+    <div className="relative p-8 rounded-[40px] bg-card/30 border border-white/5 hover:border-primary/20 transition-all group overflow-hidden h-full">
       <div className="text-5xl mb-8">{number}</div>
-      <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed font-medium">{description}</p>
+      <h3 className="text-xl font-black mb-4 uppercase tracking-tight leading-tight">{title}</h3>
+      <p className="text-muted-foreground leading-relaxed font-medium text-sm">{description}</p>
     </div>
   );
 }
