@@ -96,6 +96,16 @@ export default function Home() {
               Voir la démo <Play className="ml-2 w-4 h-4 fill-current" />
             </Button>
           </div>
+
+          {/* BOUTON VOCAL SECONDAIRE */}
+          <div className="pt-4 text-reveal" style={{ animationDelay: '0.4s' }}>
+            <Button 
+              variant="ghost" 
+              className="text-primary hover:text-primary hover:bg-primary/10 font-bold uppercase tracking-widest flex items-center gap-2 mx-auto px-6 h-12 rounded-full border border-primary/20 transition-all active:scale-95"
+            >
+              <Mic className="w-4 h-4" /> Parlez à Sawt IA
+            </Button>
+          </div>
         </div>
 
         {/* VISUEL PRODUIT */}
