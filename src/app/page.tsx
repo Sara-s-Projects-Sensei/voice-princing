@@ -98,12 +98,12 @@ export default function Home() {
           </div>
 
           {/* BOUTON VOCAL SECONDAIRE */}
-          <div className="pt-4 text-reveal" style={{ animationDelay: '0.4s' }}>
+          <div className="pt-8 text-reveal" style={{ animationDelay: '0.4s' }}>
             <Button 
               variant="ghost" 
-              className="text-primary hover:text-primary hover:bg-primary/10 font-bold uppercase tracking-widest flex items-center gap-2 mx-auto px-6 h-12 rounded-full border border-primary/20 transition-all active:scale-95"
+              className="text-primary hover:text-primary hover:bg-primary/10 font-black uppercase tracking-[0.2em] flex items-center gap-4 mx-auto px-12 h-20 rounded-full border border-primary/30 transition-all active:scale-95 text-xl digital-glow bg-primary/5"
             >
-              <Mic className="w-4 h-4" /> Parlez à Sawt IA
+              <Mic className="w-6 h-6" /> Parlez à Sawt IA
             </Button>
           </div>
         </div>
