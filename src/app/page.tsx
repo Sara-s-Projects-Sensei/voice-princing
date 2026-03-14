@@ -24,7 +24,8 @@ import {
   Layers,
   Clock,
   Cpu,
-  LineChart
+  LineChart,
+  ShieldAlert
 } from "lucide-react";
 
 export default function Home() {
@@ -306,6 +307,28 @@ export default function Home() {
               title="Analyse et performance"
               description="Accédez à des tableaux de bord détaillés pour suivre les interactions, analyser les leads générés et mesurer l’impact sur votre croissance."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* SÉCURITÉ ET PROTECTION DES DONNÉES */}
+      <section className="py-24 px-6 bg-background border-t border-border overflow-hidden relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-10" />
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="w-20 h-20 rounded-3xl bg-primary/10 flex items-center justify-center mx-auto border border-primary/20 digital-glow">
+            <ShieldCheck className="w-10 h-10 text-primary" />
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase">Sécurité et protection des données</h2>
+          <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+            Les données et conversations sont traitées avec des standards élevés de sécurité, garantissant la confidentialité et la protection des informations de votre entreprise et de vos clients.
+          </p>
+          <div className="flex justify-center gap-4 pt-4">
+             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+               <ShieldAlert className="w-3 h-3 text-primary" /> Chiffrement Bout-en-Bout
+             </div>
+             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+               <ShieldCheck className="w-3 h-3 text-primary" /> Conformité RGPD
+             </div>
           </div>
         </div>
       </section>
