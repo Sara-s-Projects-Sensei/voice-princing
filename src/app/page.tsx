@@ -67,26 +67,26 @@ export default function Home() {
             <p className="text-sm md:text-base font-bold text-primary uppercase tracking-widest">
               Darija marocaine native • 32+ langues
             </p>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto font-bold flex items-center justify-center gap-3 whitespace-nowrap">
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto font-bold flex items-center justify-center gap-3 whitespace-nowrap">
               Leads qualifiés • Ventes automatisées • ROI maximisé
-              <TrendingUp className="w-5 h-5 text-primary" />
+              <TrendingUp className="w-4 h-4 text-primary" />
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6 text-reveal" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 text-reveal" style={{ animationDelay: '0.3s' }}>
             <Button 
-              size="lg" 
-              className="bg-primary text-black hover:bg-primary/90 digital-glow px-10 h-14 rounded-full text-lg font-black uppercase tracking-tighter group"
+              size="default" 
+              className="bg-primary text-black hover:bg-primary/90 digital-glow px-8 h-11 rounded-full text-sm font-black uppercase tracking-tighter group"
               onClick={() => setShowDashboard(true)}
             >
-              Démarrer gratuitement <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              Démarrer gratuitement <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </Button>
             <Button 
-              size="lg" 
+              size="default" 
               variant="outline" 
-              className="border-white/10 hover:border-primary text-white hover:text-primary px-10 h-14 rounded-full text-lg font-bold bg-white/5 backdrop-blur-sm"
+              className="border-white/10 hover:border-primary text-white hover:text-primary px-8 h-11 rounded-full text-sm font-bold bg-white/5 backdrop-blur-sm"
             >
-              Voir la démo <Play className="ml-2 w-4 h-4 fill-current" />
+              Voir la démo <Play className="ml-2 w-3 h-3 fill-current" />
             </Button>
           </div>
 
@@ -103,10 +103,10 @@ export default function Home() {
       </section>
 
       {/* COMMENT ÇA MARCHE */}
-      <section className="py-32 px-6 bg-[#0E1210] border-y border-white/5">
+      <section className="py-20 px-6 bg-[#0E1210] border-y border-white/5">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black text-center mb-24 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-3xl font-black text-center mb-12 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <StepCard 
               number="1️⃣"
               title="Configurez votre agent IA"
@@ -159,10 +159,10 @@ export default function Home() {
 
 function StepCard({ number, title, description }: { number: string, title: string, description: string }) {
   return (
-    <div className="relative p-8 rounded-[40px] bg-card/30 border border-white/5 hover:border-primary/20 transition-all group overflow-hidden h-full">
-      <div className="text-5xl mb-8">{number}</div>
-      <h3 className="text-xl font-black mb-4 uppercase tracking-tight leading-tight">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed font-medium text-sm">{description}</p>
+    <div className="relative p-6 rounded-3xl bg-card/30 border border-white/5 hover:border-primary/20 transition-all group overflow-hidden h-full flex flex-col">
+      <div className="text-3xl mb-4">{number}</div>
+      <h3 className="text-base font-black mb-2 uppercase tracking-tight leading-tight">{title}</h3>
+      <p className="text-muted-foreground leading-relaxed font-medium text-xs">{description}</p>
     </div>
   );
 }
