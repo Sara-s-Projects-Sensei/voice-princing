@@ -24,8 +24,7 @@ import {
   Layers,
   Clock,
   Cpu,
-  LineChart,
-  Lock
+  LineChart
 } from "lucide-react";
 
 export default function Home() {
@@ -306,11 +305,6 @@ export default function Home() {
               icon={<LineChart className="w-6 h-6" />}
               title="Analyse et performance"
               description="Accédez à des tableaux de bord détaillés pour suivre les interactions, analyser les leads générés et mesurer l’impact sur votre croissance."
-            />
-            <FeatureCard 
-              icon={<Lock className="w-6 h-6" />}
-              title="Sécurité et protection des données"
-              description="Les données et conversations sont traitées avec des standards élevés de sécurité, garantissant la confidentialité et la protection des informations de votre entreprise et de vos clients."
             />
           </div>
         </div>
