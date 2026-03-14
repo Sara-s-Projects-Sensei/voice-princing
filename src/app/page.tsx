@@ -18,7 +18,14 @@ import {
   Stethoscope,
   Building2,
   ShieldCheck,
-  GraduationCap
+  GraduationCap,
+  Target,
+  TrendingDown,
+  Layers,
+  Clock,
+  Cpu,
+  LineChart,
+  Lock
 } from "lucide-react";
 
 export default function Home() {
@@ -103,10 +110,10 @@ export default function Home() {
           </h1>
 
           <div className="space-y-3 text-reveal" style={{ animationDelay: '0.2s' }}>
-            <p className="text-sm md:text-base font-bold text-primary uppercase tracking-widest">
+            <p className="text-base md:text-lg font-bold text-primary uppercase tracking-widest">
               Darija marocaine native • 32+ langues
             </p>
-            <p className="text-xs md:text-sm text-muted-foreground max-w-2xl mx-auto font-bold flex items-center justify-center gap-3 whitespace-nowrap">
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto font-bold flex items-center justify-center gap-3 whitespace-nowrap">
               Leads qualifiés • Ventes automatisées • ROI maximisé
               <TrendingUp className="w-4 h-4 text-primary" />
             </p>
@@ -259,6 +266,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FONCTIONNALITÉS */}
+      <section className="py-24 px-6 bg-card/10 border-t border-border">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="space-y-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tighter uppercase">Fonctionnalités</h2>
+            <p className="text-lg md:text-xl text-primary font-bold max-w-4xl mx-auto leading-tight italic">
+              Une plateforme conçue pour augmenter vos revenus, réduire vos coûts opérationnels et sécuriser vos interactions clients à grande échelle.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FeatureCard 
+              icon={<Target className="w-6 h-6" />}
+              title="Génération de leads qualifiés"
+              description="SAWT IA identifie et qualifie automatiquement les prospects en posant les bonnes questions. Vos équipes commerciales reçoivent des leads prêts à convertir, directement dans vos outils."
+            />
+            <FeatureCard 
+              icon={<TrendingDown className="w-6 h-6" />}
+              title="Optimisation des coûts opérationnels"
+              description="Automatisez les interactions répétitives et réduisez la charge de vos équipes. Les agents IA peuvent gérer des milliers de conversations simultanément, tout en diminuant les coûts liés au support et aux centres d’appel."
+            />
+            <FeatureCard 
+              icon={<Layers className="w-6 h-6" />}
+              title="Scalabilité illimitée"
+              description="Accompagnez la croissance de votre activité sans augmenter vos ressources humaines. SAWT IA permet de traiter un volume élevé de conversations et d’appels en parallèle, tout en maintenant une expérience client fluide."
+            />
+            <FeatureCard 
+              icon={<Clock className="w-6 h-6" />}
+              title="Disponibilité 24/7"
+              description="Vos clients obtiennent des réponses instantanées à toute heure. Ne perdez plus d’opportunités commerciales en dehors des horaires de bureau."
+            />
+            <FeatureCard 
+              icon={<Cpu className="w-6 h-6" />}
+              title="Intégration à votre écosystème"
+              description="Connectez facilement SAWT IA à vos CRM, ERP, plateformes e-commerce et outils métiers pour centraliser et exploiter vos données clients."
+            />
+            <FeatureCard 
+              icon={<LineChart className="w-6 h-6" />}
+              title="Analyse et performance"
+              description="Accédez à des tableaux de bord détaillés pour suivre les interactions, analyser les leads générés et mesurer l’impact sur votre croissance."
+            />
+            <FeatureCard 
+              icon={<Lock className="w-6 h-6" />}
+              title="Sécurité et protection des données"
+              description="Les données et conversations sont traitées avec des standards élevés de sécurité, garantissant la confidentialité et la protection des informations de votre entreprise et de vos clients."
+            />
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="py-24 px-6 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-20">
@@ -306,6 +363,16 @@ function UseCaseCard({ icon, title, description }: { icon: React.ReactNode, titl
       </div>
       <h3 className="text-xl font-black uppercase tracking-tight">{title}</h3>
       <p className="text-sm text-muted-foreground leading-relaxed font-medium">{description}</p>
+    </div>
+  );
+}
+
+function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
+  return (
+    <div className="p-6 rounded-2xl bg-card/30 border border-border/50 hover:bg-card/50 transition-all space-y-4">
+      <div className="text-primary">{icon}</div>
+      <h3 className="text-lg font-black uppercase tracking-tight leading-tight">{title}</h3>
+      <p className="text-xs text-muted-foreground font-medium leading-relaxed">{description}</p>
     </div>
   );
 }
