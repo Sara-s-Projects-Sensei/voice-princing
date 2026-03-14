@@ -17,7 +17,8 @@ import {
   MessageSquare,
   Stethoscope,
   Building2,
-  ShieldCheck
+  ShieldCheck,
+  GraduationCap
 } from "lucide-react";
 
 export default function Home() {
@@ -248,6 +249,11 @@ export default function Home() {
               icon={<ShieldCheck className="w-6 h-6 text-primary" />}
               title="Assurance"
               description="Automatisez le traitement des premières demandes clients. L’agent IA peut répondre aux questions sur les contrats, qualifier les demandes de devis ou de sinistre et planifier des rendez-vous avec un conseiller 24/7."
+            />
+            <UseCaseCard 
+              icon={<GraduationCap className="w-6 h-6 text-primary" />}
+              title="Éducation & formation"
+              description="Automatisez la gestion des demandes d’information des étudiants et des candidats. L’agent IA répond aux questions sur les programmes, qualifie les candidats potentiels et planifie automatiquement les rendez-vous d’inscription ou d’orientation."
             />
           </div>
         </div>
