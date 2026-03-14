@@ -167,13 +167,17 @@ export default function Home() {
       <section className="py-12 px-6 border-b border-border bg-background/50">
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-center text-muted-foreground mb-10">Connectez vos outils préférés</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-500 px-4">
             <LogoItem name="Google" />
             <LogoItem name="Google Sheets" />
             <LogoItem name="Shopify" />
             <LogoItem name="Immotech" />
             <LogoItem name="Bitrix24" />
             <LogoItem name="WooCommerce" />
+            <LogoItem name="WhatsApp" />
+            <LogoItem name="Facebook" />
+            <LogoItem name="Instagram" />
+            <LogoItem name="SIP Trunk" />
           </div>
         </div>
       </section>
@@ -219,7 +223,7 @@ function StepCard({ number, title, description }: { number: string, title: strin
 
 function LogoItem({ name }: { name: string }) {
   return (
-    <span className="text-sm md:text-lg font-black tracking-tighter uppercase text-foreground hover:text-primary transition-colors cursor-default">
+    <span className="text-xs md:text-sm font-black tracking-tighter uppercase text-foreground hover:text-primary transition-colors cursor-default whitespace-nowrap">
       {name}
     </span>
   );
