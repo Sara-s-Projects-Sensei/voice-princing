@@ -53,29 +53,32 @@ export default function Home() {
 
           {/* Navigation Horizontale */}
           <nav className="flex items-center gap-6">
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Accueil</a>
-            <a href="#services" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Solutions</a>
-            <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
-            <a href="#api" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">API</a>
-            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Services</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">API</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Voice-Over</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Demander une démo</a>
             
             {/* Theme Toggle */}
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleTheme}
-              className="rounded-full w-9 h-9 text-muted-foreground hover:text-foreground"
-            >
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </Button>
+            <div className="flex items-center ml-4 border-l border-border pl-6 gap-2">
+               <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={toggleTheme}
+                className="rounded-full w-9 h-9 text-muted-foreground hover:text-foreground"
+              >
+                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </Button>
 
-            {/* Bouton Signature */}
-            <Button 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-8 h-11 rounded-full font-bold transition-all active:scale-95 ml-2"
-              onClick={() => setShowDashboard(true)}
-            >
-              Accéder aux agents
-            </Button>
+              {/* Bouton Signature */}
+              <Button 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-8 h-11 rounded-full font-bold transition-all active:scale-95"
+                onClick={() => setShowDashboard(true)}
+              >
+                Accéder aux agents
+              </Button>
+            </div>
           </nav>
         </div>
       </header>
@@ -96,7 +99,7 @@ export default function Home() {
             <p className="text-sm md:text-base font-bold text-primary uppercase tracking-widest">
               Darija marocaine native • 32+ langues
             </p>
-            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto font-bold flex items-center justify-center gap-3 whitespace-nowrap">
+            <p className="text-xs md:text-sm text-muted-foreground max-w-2xl mx-auto font-bold flex items-center justify-center gap-3 whitespace-nowrap">
               Leads qualifiés • Ventes automatisées • ROI maximisé
               <TrendingUp className="w-4 h-4 text-primary" />
             </p>
@@ -104,18 +107,18 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 text-reveal" style={{ animationDelay: '0.3s' }}>
             <Button 
-              size="default" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-8 h-11 rounded-full text-sm font-black uppercase tracking-tighter group"
+              size="sm" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-6 h-10 rounded-full text-xs font-black uppercase tracking-tighter group"
               onClick={() => setShowDashboard(true)}
             >
-              Démarrer gratuitement <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
+              Démarrer gratuitement <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-2 transition-transform" />
             </Button>
             <Button 
-              size="default" 
+              size="sm" 
               variant="outline" 
-              className="border-border hover:border-primary text-foreground hover:text-primary px-8 h-11 rounded-full text-sm font-bold bg-card/50 backdrop-blur-sm"
+              className="border-border hover:border-primary text-foreground hover:text-primary px-6 h-10 rounded-full text-xs font-bold bg-card/50 backdrop-blur-sm"
             >
-              Voir la démo <Play className="ml-2 w-3 h-3 fill-current" />
+              Voir la démo <Play className="ml-2 w-2 h-2 fill-current" />
             </Button>
           </div>
 
@@ -134,8 +137,8 @@ export default function Home() {
       {/* COMMENT ÇA MARCHE */}
       <section className="py-20 px-6 bg-card/30 border-y border-border">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-black text-center mb-12 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-xl font-black text-center mb-12 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <StepCard 
               number="1️⃣"
               title="Configurez votre agent IA"
@@ -156,6 +159,21 @@ export default function Home() {
               title="Automatisez vos conversations"
               description="L’agent IA répond aux clients, qualifie les leads, planifie des rendez-vous et alimente vos outils automatiquement."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION LOGOS / INTÉGRATIONS */}
+      <section className="py-12 px-6 border-b border-border bg-background/50">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-center text-muted-foreground mb-10">Connectez vos outils préférés</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+            <LogoItem name="Google" />
+            <LogoItem name="Google Sheets" />
+            <LogoItem name="Shopify" />
+            <LogoItem name="Immotech" />
+            <LogoItem name="Bitrix24" />
+            <LogoItem name="WooCommerce" />
           </div>
         </div>
       </section>
@@ -191,11 +209,19 @@ export default function Home() {
 
 function StepCard({ number, title, description }: { number: string, title: string, description: string }) {
   return (
-    <div className="relative p-6 rounded-3xl bg-card/50 border border-border hover:border-primary/20 transition-all group overflow-hidden h-full flex flex-col">
-      <div className="text-3xl mb-4">{number}</div>
-      <h3 className="text-base font-black mb-2 uppercase tracking-tight leading-tight">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed font-medium text-xs">{description}</p>
+    <div className="relative p-4 rounded-2xl bg-card/50 border border-border hover:border-primary/20 transition-all group overflow-hidden h-full flex flex-col">
+      <div className="text-xl mb-3">{number}</div>
+      <h3 className="text-xs font-black mb-1 uppercase tracking-tight leading-tight">{title}</h3>
+      <p className="text-muted-foreground leading-tight font-medium text-[10px]">{description}</p>
     </div>
+  );
+}
+
+function LogoItem({ name }: { name: string }) {
+  return (
+    <span className="text-sm md:text-lg font-black tracking-tighter uppercase text-foreground hover:text-primary transition-colors cursor-default">
+      {name}
+    </span>
   );
 }
 
