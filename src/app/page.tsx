@@ -164,20 +164,34 @@ export default function Home() {
       </section>
 
       {/* SECTION LOGOS / INTÉGRATIONS */}
-      <section className="py-12 px-6 border-b border-border bg-background/50">
+      <section className="py-12 px-6 border-b border-border bg-background/50 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-center text-muted-foreground mb-10">Connectez vos outils préférés</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-500 px-4">
-            <LogoItem name="Google" />
-            <LogoItem name="Google Sheets" />
-            <LogoItem name="Shopify" />
-            <LogoItem name="Immotech" />
-            <LogoItem name="Bitrix24" />
-            <LogoItem name="WooCommerce" />
-            <LogoItem name="WhatsApp" />
-            <LogoItem name="Facebook" />
-            <LogoItem name="Instagram" />
-            <LogoItem name="SIP Trunk" />
+          <div className="relative flex overflow-hidden">
+            {/* Conteneur pour le défilement horizontal infini */}
+            <div className="animate-marquee flex items-center gap-12 md:gap-24 pr-12 md:pr-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+              <LogoItem name="Google" />
+              <LogoItem name="Google Sheets" />
+              <LogoItem name="Shopify" />
+              <LogoItem name="Immotech" />
+              <LogoItem name="Bitrix24" />
+              <LogoItem name="WooCommerce" />
+              <LogoItem name="WhatsApp" />
+              <LogoItem name="Facebook" />
+              <LogoItem name="Instagram" />
+              <LogoItem name="SIP Trunk" />
+              {/* Duplication pour l'effet infini */}
+              <LogoItem name="Google" />
+              <LogoItem name="Google Sheets" />
+              <LogoItem name="Shopify" />
+              <LogoItem name="Immotech" />
+              <LogoItem name="Bitrix24" />
+              <LogoItem name="WooCommerce" />
+              <LogoItem name="WhatsApp" />
+              <LogoItem name="Facebook" />
+              <LogoItem name="Instagram" />
+              <LogoItem name="SIP Trunk" />
+            </div>
           </div>
         </div>
       </section>
