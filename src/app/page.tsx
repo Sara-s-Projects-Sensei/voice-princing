@@ -14,7 +14,10 @@ import {
   ShoppingBag,
   Headset,
   Calendar,
-  MessageSquare
+  MessageSquare,
+  Stethoscope,
+  Building2,
+  ShieldCheck
 } from "lucide-react";
 
 export default function Home() {
@@ -230,6 +233,21 @@ export default function Home() {
               icon={<MessageSquare className="w-6 h-6 text-primary" />}
               title="Service client"
               description="Améliorez l’expérience client grâce à des réponses instantanées et personnalisées 24/7. L’agent IA traite les demandes, répond aux questions fréquentes et redirige les cas complexes vers vos équipes humaines si nécessaire."
+            />
+            <UseCaseCard 
+              icon={<Stethoscope className="w-6 h-6 text-primary" />}
+              title="Santé & cliniques"
+              description="Simplifiez la gestion de votre accueil et de vos rendez-vous. L’agent IA prend en charge la prise de rendez-vous médicaux, envoie des rappels automatiques aux patients et répond aux questions fréquentes concernant les consultations."
+            />
+            <UseCaseCard 
+              icon={<Building2 className="w-6 h-6 text-primary" />}
+              title="Banque"
+              description="Améliorez l’expérience client grâce à des réponses rapides et automatisées. L’agent IA qualifie les demandes des clients, répond aux questions courantes sur les services bancaires et oriente les clients vers le service approprié."
+            />
+            <UseCaseCard 
+              icon={<ShieldCheck className="w-6 h-6 text-primary" />}
+              title="Assurance"
+              description="Automatisez le traitement des premières demandes clients. L’agent IA peut répondre aux questions sur les contrats, qualifier les demandes de devis ou de sinistre et planifier des rendez-vous avec un conseiller 24/7."
             />
           </div>
         </div>
