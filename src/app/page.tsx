@@ -9,7 +9,12 @@ import {
   TrendingUp,
   Mic,
   Sun,
-  Moon
+  Moon,
+  Home as HomeIcon,
+  ShoppingBag,
+  Headset,
+  Calendar,
+  MessageSquare
 } from "lucide-react";
 
 export default function Home() {
@@ -53,15 +58,14 @@ export default function Home() {
 
           {/* Navigation Horizontale */}
           <nav className="flex items-center gap-6">
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Services</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Accueil</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Solutions</a>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">API</a>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Voice-Over</a>
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Demander une démo</a>
             
-            {/* Theme Toggle */}
-            <div className="flex items-center ml-4 border-l border-border pl-6 gap-2">
+            {/* Theme Toggle & Bouton */}
+            <div className="flex items-center ml-4 border-l border-border pl-6 gap-4">
                <Button 
                 variant="ghost" 
                 size="icon" 
@@ -71,7 +75,6 @@ export default function Home() {
                 {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </Button>
 
-              {/* Bouton Signature */}
               <Button 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-8 h-11 rounded-full font-bold transition-all active:scale-95"
                 onClick={() => setShowDashboard(true)}
@@ -168,7 +171,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-center text-muted-foreground mb-10">Connectez vos outils préférés</p>
           <div className="relative flex overflow-hidden">
-            {/* Conteneur pour le défilement horizontal infini */}
             <div className="animate-marquee flex items-center gap-12 md:gap-24 pr-12 md:pr-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
               <LogoItem name="Google" />
               <LogoItem name="Google Sheets" />
@@ -180,7 +182,6 @@ export default function Home() {
               <LogoItem name="Facebook" />
               <LogoItem name="Instagram" />
               <LogoItem name="SIP Trunk" />
-              {/* Duplication pour l'effet infini */}
               <LogoItem name="Google" />
               <LogoItem name="Google Sheets" />
               <LogoItem name="Shopify" />
@@ -192,6 +193,44 @@ export default function Home() {
               <LogoItem name="Instagram" />
               <LogoItem name="SIP Trunk" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CAS D'USAGE */}
+      <section className="py-24 px-6 bg-background">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="space-y-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tighter uppercase">Cas d’usage</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto font-medium">Découvrez comment SAWT IA transforme la relation client dans différents secteurs d'activité.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <UseCaseCard 
+              icon={<HomeIcon className="w-6 h-6 text-primary" />}
+              title="Immobilier"
+              description="Automatisez la qualification de vos leads immobiliers dès le premier contact. L’agent IA répond aux prospects, pose les bonnes questions (budget, surface, localisation, financement) et planifie automatiquement des visites ou rendez-vous avec vos commerciaux via Google Agenda ou votre CRM."
+            />
+            <UseCaseCard 
+              icon={<ShoppingBag className="w-6 h-6 text-primary" />}
+              title="E-commerce"
+              description="Offrez un support client instantané 24/7 sans mobiliser votre équipe. L’agent IA répond aux questions sur les produits, vérifie l’état des commandes, informe sur les livraisons et accompagne vos clients dans leur parcours d’achat."
+            />
+            <UseCaseCard 
+              icon={<Headset className="w-6 h-6 text-primary" />}
+              title="Centres d’appel"
+              description="Optimisez votre centre d’appel grâce à des agents vocaux intelligents capables de gérer des milliers d’interactions simultanément. SAWT IA peut répondre aux appels entrants, lancer des campagnes d’appels sortants et qualifier les prospects automatiquement."
+            />
+            <UseCaseCard 
+              icon={<Calendar className="w-6 h-6 text-primary" />}
+              title="Prise de rendez-vous"
+              description="Simplifiez la gestion de vos agendas. L’agent IA propose des créneaux disponibles, confirme les rendez-vous et synchronise automatiquement les réservations avec Google Agenda ou votre CRM."
+            />
+            <UseCaseCard 
+              icon={<MessageSquare className="w-6 h-6 text-primary" />}
+              title="Service client"
+              description="Améliorez l’expérience client grâce à des réponses instantanées et personnalisées 24/7. L’agent IA traite les demandes, répond aux questions fréquentes et redirige les cas complexes vers vos équipes humaines si nécessaire."
+            />
           </div>
         </div>
       </section>
@@ -231,6 +270,18 @@ function StepCard({ number, title, description }: { number: string, title: strin
       <div className="text-xl mb-3">{number}</div>
       <h3 className="text-xs font-black mb-1 uppercase tracking-tight leading-tight">{title}</h3>
       <p className="text-muted-foreground leading-tight font-medium text-[10px]">{description}</p>
+    </div>
+  );
+}
+
+function UseCaseCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
+  return (
+    <div className="p-8 rounded-3xl bg-card/40 border border-border hover:border-primary/20 transition-all group h-full space-y-4">
+      <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
+        {icon}
+      </div>
+      <h3 className="text-xl font-black uppercase tracking-tight">{title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed font-medium">{description}</p>
     </div>
   );
 }
