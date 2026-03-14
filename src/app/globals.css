@@ -25,6 +25,28 @@
     --ring: 144 86% 52%;
     --radius: 0.75rem;
   }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 150 8% 8%;
+    --card: 0 0% 98%;
+    --card-foreground: 150 8% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 8% 10%;
+    --primary: 144 86% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 8% 95%;
+    --secondary-foreground: 150 8% 10%;
+    --muted: 150 8% 95%;
+    --muted-foreground: 150 5% 45%;
+    --accent: 95 74% 65%;
+    --accent-foreground: 150 8% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 8% 90%;
+    --input: 150 8% 90%;
+    --ring: 144 86% 52%;
+  }
 }
 
 @layer base {
@@ -32,7 +54,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground font-body antialiased transition-colors duration-300;
   }
 }
 

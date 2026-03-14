@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dashboard } from "@/components/voxchat/Dashboard";
 import { Button } from "@/components/ui/button";
 import { 
@@ -8,41 +8,70 @@ import {
   Play, 
   TrendingUp,
   Mic,
+  Sun,
+  Moon
 } from "lucide-react";
 
 export default function Home() {
   const [showDashboard, setShowDashboard] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === 'light') {
+      root.classList.remove('dark');
+      root.classList.add('light');
+    } else {
+      root.classList.remove('light');
+      root.classList.add('dark');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   if (showDashboard) {
     return <Dashboard />;
   }
 
   return (
-    <div className="min-h-screen bg-[#080B0A] text-foreground flex flex-col font-body selection:bg-primary selection:text-black">
+    <div className="min-h-screen bg-background text-foreground flex flex-col font-body selection:bg-primary selection:text-black">
       {/* BARRE DE MENU */}
-      <header className="fixed top-0 left-0 right-0 h-20 bg-[#080B0A] border-b border-white/5 z-[100] flex items-center">
+      <header className="fixed top-0 left-0 right-0 h-20 bg-background/80 backdrop-blur-md border-b border-border z-[100] flex items-center">
         <div className="container mx-auto px-6 flex justify-between items-center">
           {/* Logo Sawt IA */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center digital-glow">
-              <Mic className="text-black w-6 h-6" />
+              <Mic className="text-primary-foreground w-6 h-6" />
             </div>
-            <span className="text-2xl font-black tracking-tighter uppercase">
-              SAWT <span className="text-primary">IA</span>
-            </span>
+            <div className="flex items-center text-2xl font-black tracking-tighter uppercase">
+              <span className="text-foreground">SAWT</span>
+              <span className="text-primary ml-1">IA</span>
+            </div>
           </div>
 
           {/* Navigation Horizontale */}
-          <nav className="flex items-center gap-8">
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Accueil</a>
-            <a href="#services" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Solutions</a>
-            <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Pricing</a>
-            <a href="#api" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">API</a>
-            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Contact</a>
+          <nav className="flex items-center gap-6">
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Accueil</a>
+            <a href="#services" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Solutions</a>
+            <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+            <a href="#api" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">API</a>
+            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             
+            {/* Theme Toggle */}
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={toggleTheme}
+              className="rounded-full w-9 h-9 text-muted-foreground hover:text-foreground"
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </Button>
+
             {/* Bouton Signature */}
             <Button 
-              className="bg-primary text-black hover:bg-primary/90 digital-glow px-8 h-11 rounded-full font-bold transition-all active:scale-95 ml-4"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-8 h-11 rounded-full font-bold transition-all active:scale-95 ml-2"
               onClick={() => setShowDashboard(true)}
             >
               Accéder aux agents
@@ -76,7 +105,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 text-reveal" style={{ animationDelay: '0.3s' }}>
             <Button 
               size="default" 
-              className="bg-primary text-black hover:bg-primary/90 digital-glow px-8 h-11 rounded-full text-sm font-black uppercase tracking-tighter group"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-8 h-11 rounded-full text-sm font-black uppercase tracking-tighter group"
               onClick={() => setShowDashboard(true)}
             >
               Démarrer gratuitement <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
@@ -84,7 +113,7 @@ export default function Home() {
             <Button 
               size="default" 
               variant="outline" 
-              className="border-white/10 hover:border-primary text-white hover:text-primary px-8 h-11 rounded-full text-sm font-bold bg-white/5 backdrop-blur-sm"
+              className="border-border hover:border-primary text-foreground hover:text-primary px-8 h-11 rounded-full text-sm font-bold bg-card/50 backdrop-blur-sm"
             >
               Voir la démo <Play className="ml-2 w-3 h-3 fill-current" />
             </Button>
@@ -103,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* COMMENT ÇA MARCHE */}
-      <section className="py-20 px-6 bg-[#0E1210] border-y border-white/5">
+      <section className="py-20 px-6 bg-card/30 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-black text-center mb-12 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -132,14 +161,17 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-24 px-6 border-t border-white/5 bg-black">
+      <footer className="py-24 px-6 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-20">
           <div className="space-y-8 max-w-sm">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <Mic className="text-black w-6 h-6" />
+                <Mic className="text-primary-foreground w-6 h-6" />
               </div>
-              <span className="text-2xl font-black uppercase tracking-tighter">SAWT <span className="text-primary">IA</span></span>
+              <div className="flex items-center text-2xl font-black tracking-tighter uppercase">
+                <span className="text-foreground">SAWT</span>
+                <span className="text-primary ml-1">IA</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium">La plateforme d'intelligence conversationnelle ultime pour propulser votre relation client dans l'ère de l'IA.</p>
           </div>
@@ -149,7 +181,7 @@ export default function Home() {
             <FooterLinks title="Légal" links={['Confidentialité', 'Conditions']} />
           </div>
         </div>
-        <div className="max-w-7xl mx-auto mt-24 pt-10 border-t border-white/5 text-[10px] text-muted-foreground uppercase font-black tracking-[0.3em] text-center">
+        <div className="max-w-7xl mx-auto mt-24 pt-10 border-t border-border text-[10px] text-muted-foreground uppercase font-black tracking-[0.3em] text-center">
           <p>© 2025 SAWT IA. Tous droits réservés.</p>
         </div>
       </footer>
@@ -159,7 +191,7 @@ export default function Home() {
 
 function StepCard({ number, title, description }: { number: string, title: string, description: string }) {
   return (
-    <div className="relative p-6 rounded-3xl bg-card/30 border border-white/5 hover:border-primary/20 transition-all group overflow-hidden h-full flex flex-col">
+    <div className="relative p-6 rounded-3xl bg-card/50 border border-border hover:border-primary/20 transition-all group overflow-hidden h-full flex flex-col">
       <div className="text-3xl mb-4">{number}</div>
       <h3 className="text-base font-black mb-2 uppercase tracking-tight leading-tight">{title}</h3>
       <p className="text-muted-foreground leading-relaxed font-medium text-xs">{description}</p>
