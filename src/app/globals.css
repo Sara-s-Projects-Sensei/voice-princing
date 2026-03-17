@@ -10,19 +10,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 150 8% 10%;
     --popover-foreground: 0 0% 98%;
-    --primary: 144 86% 52%;
+    --primary: 94 82% 66%;
     --primary-foreground: 150 8% 8%;
     --secondary: 150 8% 15%;
     --secondary-foreground: 0 0% 98%;
     --muted: 150 8% 15%;
     --muted-foreground: 150 5% 65%;
-    --accent: 95 74% 65%;
+    --accent: 94 82% 66%;
     --accent-foreground: 150 8% 8%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 150 8% 18%;
     --input: 150 8% 18%;
-    --ring: 144 86% 52%;
+    --ring: 94 82% 66%;
     --radius: 0.75rem;
   }
 
@@ -33,19 +33,19 @@
     --card-foreground: 150 8% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 150 8% 10%;
-    --primary: 144 86% 45%;
+    --primary: 94 82% 55%;
     --primary-foreground: 0 0% 100%;
     --secondary: 150 8% 95%;
     --secondary-foreground: 150 8% 10%;
     --muted: 150 8% 95%;
     --muted-foreground: 150 5% 45%;
-    --accent: 95 74% 65%;
+    --accent: 94 82% 55%;
     --accent-foreground: 150 8% 10%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 150 8% 90%;
     --input: 150 8% 90%;
-    --ring: 144 86% 52%;
+    --ring: 94 82% 55%;
   }
 }
 
@@ -63,7 +63,7 @@
 }
 
 .digital-glow {
-  box-shadow: 0 0 20px rgba(26, 238, 111, 0.2);
+  box-shadow: 0 0 20px rgba(157, 238, 96, 0.2);
 }
 
 .text-reveal {
