@@ -163,7 +163,7 @@ export default function PricingPage() {
       </header>
 
       <main className="flex-1 pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto space-y-16">
+        <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-reveal">
               PRICING <span className="text-primary">SAWT IA</span>
@@ -173,7 +173,16 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* AJOUT PSYCHOLOGIQUE AVANT LES PLANS */}
+          <div className="text-center max-w-3xl mx-auto text-reveal" style={{ animationDelay: '0.2s' }}>
+             <div className="p-6 rounded-3xl bg-primary/5 border border-primary/20 digital-glow">
+                <p className="text-lg md:text-2xl font-black text-primary uppercase tracking-tighter leading-tight italic">
+                  ⚡ “Chaque lead non traité est une opportunité perdue. Automatisez dès maintenant.”
+                </p>
+             </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-reveal" style={{ animationDelay: '0.3s' }}>
             {plans.map((plan, idx) => (
               <Card 
                 key={idx} 
@@ -228,15 +237,6 @@ export default function PricingPage() {
                 </CardFooter>
               </Card>
             ))}
-          </div>
-
-          {/* AJOUT PSYCHOLOGIQUE */}
-          <div className="pt-12 text-center max-w-2xl mx-auto">
-             <div className="p-8 rounded-3xl bg-primary/5 border border-primary/20 digital-glow">
-                <p className="text-lg md:text-xl font-black text-primary uppercase tracking-tighter leading-tight italic">
-                  ⚡ “Chaque lead non traité est une opportunité perdue. Automatisez dès maintenant.”
-                </p>
-             </div>
           </div>
 
           <div className="pt-12 text-center">
