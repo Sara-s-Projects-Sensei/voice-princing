@@ -28,7 +28,7 @@ export default function PricingPage() {
   const plans = [
     {
       name: "Discovery",
-      icon: <Zap className="w-5 h-5 text-green-400" />,
+      icon: <Zap className="w-5 h-5 text-primary" />,
       dot: "🟢",
       price: "0 DH",
       period: "/ mois",
@@ -51,7 +51,7 @@ export default function PricingPage() {
     },
     {
       name: "Launch",
-      icon: <Star className="w-5 h-5 text-yellow-400" />,
+      icon: <Star className="w-5 h-5 text-primary" />,
       dot: "🟡",
       price: "279 DH",
       period: "/ mois",
@@ -77,7 +77,7 @@ export default function PricingPage() {
     },
     {
       name: "Automation",
-      icon: <ShieldCheck className="w-5 h-5 text-orange-400" />,
+      icon: <ShieldCheck className="w-5 h-5 text-primary" />,
       dot: "🟠",
       price: "379 DH",
       period: "/ mois",
@@ -102,7 +102,7 @@ export default function PricingPage() {
     },
     {
       name: "Scale AI",
-      icon: <Crown className="w-5 h-5 text-blue-400" />,
+      icon: <Crown className="w-5 h-5 text-primary" />,
       dot: "🔵",
       price: "779 DH",
       period: "/ mois",
@@ -130,12 +130,13 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col font-body">
-      {/* HEADER */}
+    <div className="min-h-screen bg-background text-foreground flex flex-col font-body selection:bg-primary selection:text-black">
+      {/* BARRE DE MENU - IDENTIQUE À LA HOME */}
       <header className="fixed top-0 left-0 right-0 h-20 bg-background/80 backdrop-blur-md border-b border-border z-[100] flex items-center">
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center digital-glow group-hover:scale-110 transition-transform">
+          {/* Logo Sawt IA */}
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center digital-glow">
               <Mic className="text-primary-foreground w-6 h-6" />
             </div>
             <div className="flex items-center text-2xl font-black tracking-tighter uppercase">
@@ -144,10 +145,15 @@ export default function PricingPage() {
             </div>
           </Link>
 
+          {/* Navigation Horizontale */}
           <nav className="flex items-center gap-6">
             <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Accueil</Link>
+            <Link href="/#solutions" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Solutions</Link>
             <Link href="/pricing" className="text-sm font-medium text-primary transition-colors">Pricing</Link>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">API</a>
+            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             
+            {/* Theme Toggle & Bouton */}
             <div className="flex items-center ml-4 border-l border-border pl-6 gap-4">
                <Button 
                 variant="ghost" 
@@ -157,6 +163,14 @@ export default function PricingPage() {
               >
                 {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </Button>
+
+              <Link href="/">
+                <Button 
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 digital-glow px-8 h-11 rounded-full font-bold transition-all active:scale-95"
+                >
+                  Accéder aux agents
+                </Button>
+              </Link>
             </div>
           </nav>
         </div>
@@ -173,7 +187,7 @@ export default function PricingPage() {
             </p>
           </div>
 
-          {/* AJOUT PSYCHOLOGIQUE AVANT LES PLANS */}
+          {/* AJOUT PSYCHOLOGIQUE */}
           <div className="text-center max-w-3xl mx-auto text-reveal" style={{ animationDelay: '0.2s' }}>
              <div className="p-6 rounded-3xl bg-primary/5 border border-primary/20 digital-glow">
                 <p className="text-lg md:text-2xl font-black text-primary uppercase tracking-tighter leading-tight italic">
@@ -186,7 +200,7 @@ export default function PricingPage() {
             {plans.map((plan, idx) => (
               <Card 
                 key={idx} 
-                className={`relative flex flex-col bg-card/40 border-border hover:border-primary/50 transition-all duration-500 overflow-hidden group ${plan.highlight ? 'ring-2 ring-primary border-primary shadow-[0_0_30px_rgba(157,238,96,0.15)]' : ''}`}
+                className={`relative flex flex-col bg-card/40 border-border hover:border-primary/50 transition-all duration-500 overflow-hidden group ${plan.highlight ? 'ring-2 ring-primary border-primary shadow-[0_0_30px_rgba(26,238,111,0.15)]' : ''}`}
               >
                 {plan.highlight && (
                   <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-black uppercase px-3 py-1 rounded-bl-lg tracking-widest">

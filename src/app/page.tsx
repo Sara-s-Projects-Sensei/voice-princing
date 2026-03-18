@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -58,7 +59,7 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 h-20 bg-background/80 backdrop-blur-md border-b border-border z-[100] flex items-center">
         <div className="container mx-auto px-6 flex justify-between items-center">
           {/* Logo Sawt IA */}
-          <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center digital-glow">
               <Mic className="text-primary-foreground w-6 h-6" />
             </div>
@@ -66,12 +67,12 @@ export default function Home() {
               <span className="text-foreground">SAWT</span>
               <span className="text-primary ml-1">IA</span>
             </div>
-          </div>
+          </Link>
 
           {/* Navigation Horizontale */}
           <nav className="flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Accueil</Link>
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Solutions</a>
+            <Link href="/" className="text-sm font-medium text-primary transition-colors">Accueil</Link>
+            <a href="#solutions" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Solutions</a>
             <Link href="/pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">API</a>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
@@ -150,7 +151,7 @@ export default function Home() {
       </section>
 
       {/* COMMENT ÇA MARCHE */}
-      <section className="py-20 px-6 bg-card/30 border-y border-border">
+      <section id="solutions" className="py-20 px-6 bg-card/30 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-black text-center mb-12 tracking-tighter uppercase">COMMENT ÇA MARCHE</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -286,7 +287,7 @@ export default function Home() {
             <FeatureCard 
               icon={<TrendingDown className="w-6 h-6" />}
               title="Optimisation des coûts opérationnels"
-              description="Automatisez les interactions répétitives et réduisez la charge de vos équipes. Les agents IA peuvent gérer des milliers de conversations simultanément, tout en diminuant les coûts liés au support et aux centres d’appel."
+              description="Automatisez les interactions répétitives et réduisez la charge de vos équipes. Les agents IA peuvent gérer des milliers de conversations simultanément, tout en diminuant les coûts liés au support and aux centres d’appel."
             />
             <FeatureCard 
               icon={<Layers className="w-6 h-6" />}
