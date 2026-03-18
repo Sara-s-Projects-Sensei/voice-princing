@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Dashboard } from "@/components/voxchat/Dashboard";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { 
   ArrowRight, 
   Play, 
@@ -69,9 +70,9 @@ export default function Home() {
 
           {/* Navigation Horizontale */}
           <nav className="flex items-center gap-6">
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Accueil</a>
+            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Accueil</Link>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Solutions</a>
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+            <Link href="/pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">API</a>
             <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             
